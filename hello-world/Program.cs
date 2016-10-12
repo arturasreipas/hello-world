@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace hello_world
 {
-    class Program
+   internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Program requiress at least one argument");
+                return;
+            }
+
+            var module = new HelloModule();
+
+            Console.WriteLine(module.SayHello(args[0]));
+
+            Console.ReadLine();
         }
     }
 }
