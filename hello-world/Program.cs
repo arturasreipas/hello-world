@@ -14,7 +14,7 @@ namespace hello_world
 
             var module = new HelloModule();
 
-            Console.WriteLine(module.SayHello(args[0]));
+            Console.WriteLine(module.SayHello(args[0] +' '+ args[1]));
 
             Console.ReadLine();
         }

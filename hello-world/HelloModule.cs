@@ -9,7 +9,9 @@
                 return "Name cannot be empty";
             }
 
-            return string.Format("Hello {0}!", name);
+            var module = new LowerUper();
+            //return string.Format("Hello, {0}", System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(name.ToLower()));
+            return string.Format("Hello, {0}!", module.UperLower(name));
         }
     }
 }
